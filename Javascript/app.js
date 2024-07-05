@@ -21,5 +21,5 @@ btn.addEventListener("click", function () {
     setTimeout(() => {
       element.innerHTML = list[index];
     }, index * 5000); // Delay each update by 5 seconds times the index
-  });
+  }); 
 });
