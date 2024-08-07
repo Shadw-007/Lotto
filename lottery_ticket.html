@@ -6,13 +6,41 @@
     <title>NVT Lotto</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/Images/NVT_Logo1.jpg" type="image/x-icon">
+    <style>
+        /* Add the video background style */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        body {
+            position: relative;
+            z-index: 1;
+            background: none;
+        }
+
+        .overlay-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 </head>
 <body>
+    <video autoplay muted loop class="background-video">
+        <source src="/Images/lotto.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
     <header>
         <h1>NVT Lotto</h1>
     </header>
     
-    <main class="main-container">
+    <main class="main-container overlay-content">
         <h1>Enter your Numbers</h1>
         <div class="lotto-num">
             <h2>Lotto Numbers</h2>
@@ -22,7 +50,6 @@
                 <input type="number">
                 <input type="number">
                 <input type="number">
-                
             </div>
             <div class="plus-bonus">
                 <h2>Bonus Number</h2>
@@ -33,7 +60,6 @@
         </div>
         <button class="btn">Submit</button>
     </main>
-
 
     <script src="/Javascript/app.js"></script>
 </body>

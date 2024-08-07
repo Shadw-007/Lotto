@@ -10,11 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
 function getNextFriday() {
   const now = new Date();
   const nextFriday = new Date();
+
+  // Calculate the days until the next Friday
   nextFriday.setDate(now.getDate() + ((5 - now.getDay() + 7) % 7));
-  nextFriday.setHours(0, 0, 0, 0);
+  nextFriday.setHours(17, 0, 0, 0); // Set the time to 5 PM
+
+  // If it's currently past 5 PM on Friday, move to the next Friday
   if (nextFriday.getTime() < now.getTime()) {
     nextFriday.setDate(nextFriday.getDate() + 7);
   }
+
   return nextFriday;
 }
 
