@@ -120,6 +120,17 @@ nav {
     transition: 0.4s ease;
 }
 
+.launch-time{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.launch-time p{
+    font-size: 60px;
+}
+
+
 /* Media Queries */
 
 /* Small devices (phones, less than 600px) */
